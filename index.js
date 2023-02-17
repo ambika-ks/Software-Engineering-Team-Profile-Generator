@@ -53,22 +53,22 @@ function startApp(){
             [
                 {
                     type: "input",
-                    message: "What is the name of the manager?",
+                    message: "Enter the name of the manager?",
                     name: "managerName"
                 },
                 {
                     type: "input",
-                    message: "What is the manager's employee ID?",
+                    message: "Enter the manager's employee ID?",
                     name: "managerId"
                 },
                 {
                     type: "input",
-                    message: "What is the manager's email address?",
+                    message: "Enter the manager's email address?",
                     name: "managerEmail"
                 },
                 {
                     type: "input",
-                    message: "What is the manager's offcie number?",
+                    message: "Enter the manager's offcie number?",
                     name: "managerOffice"
                 },
             ])
@@ -80,7 +80,38 @@ function startApp(){
         );
     }
 
-
+    //Function to create Engineer
+    function createEngineer () {
+        inquirer.prompt(
+            [
+                {
+                    type: "input",
+                    message: "Enter the name of the engineer?",
+                    name: "engineerName"
+                },
+                {
+                    type: "input",
+                    message: "Enter the engineer's employee ID?",
+                    name: "engineerId"
+                },
+                {
+                    type: "input",
+                    message: "Enter the engineer's email address?",
+                    name: "engineerEmail"
+                },
+                {
+                    type: "input",
+                    message: "Enter the engineer's GitHub?",
+                    name: "engineerGitHub"
+                },
+            ])
+            .then (response => {
+                const engineer = new Engineer(response.engineerName, response.engineerId, response.engineerEmail, response.engineerGitHub);
+                teamMembersArray.push(engineer);
+                makeTeam();
+            }
+        );
+    }
 
 
 
