@@ -1,0 +1,30 @@
+{
+  "name": "software-engineering-team-profile-generator",
+  "version": "1.0.0",
+  "description": "Your task is to take the given starter code and convert it into a working Node.js command-line application. This application will take in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. You have been provided with tests, so make sure every part of your code passes each provided test.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ambika-ks/Software-Engineering-Team-Profile-Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ambika-ks/Software-Engineering-Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/ambika-ks/Software-Engineering-Team-Profile-Generator#readme",
+  "dependencies": {
+    "inquirer": "^6.5.2",
+    "test": "^3.3.0"
+  },
+  "devDependencies": {
+    "jest": "^29.4.3"
+  }
+}
