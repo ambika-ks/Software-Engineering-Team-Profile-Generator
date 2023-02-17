@@ -53,22 +53,22 @@ function startApp(){
             [
                 {
                     type: "input",
-                    message: "Enter the name of the manager?",
+                    message: "Enter the name of the manager : ",
                     name: "managerName"
                 },
                 {
                     type: "input",
-                    message: "Enter the manager's employee ID?",
+                    message: "Enter the manager's employee ID : ",
                     name: "managerId"
                 },
                 {
                     type: "input",
-                    message: "Enter the manager's email address?",
+                    message: "Enter the manager's email address : ",
                     name: "managerEmail"
                 },
                 {
                     type: "input",
-                    message: "Enter the manager's offcie number?",
+                    message: "Enter the manager's offcie number : ",
                     name: "managerOffice"
                 },
             ])
@@ -86,22 +86,22 @@ function startApp(){
             [
                 {
                     type: "input",
-                    message: "Enter the name of the engineer?",
+                    message: "Enter the name of the engineer : ",
                     name: "engineerName"
                 },
                 {
                     type: "input",
-                    message: "Enter the engineer's employee ID?",
+                    message: "Enter the engineer's employee ID : ",
                     name: "engineerId"
                 },
                 {
                     type: "input",
-                    message: "Enter the engineer's email address?",
+                    message: "Enter the engineer's email address : ",
                     name: "engineerEmail"
                 },
                 {
                     type: "input",
-                    message: "Enter the engineer's GitHub?",
+                    message: "Enter the engineer's GitHub : ",
                     name: "engineerGitHub"
                 },
             ])
@@ -113,7 +113,38 @@ function startApp(){
         );
     }
 
-
+    //function to create intern
+    function createIntern () {
+        inquirer.prompt(
+            [
+                {
+                    type: "input",
+                    message: "Enter the name of the intern : ",
+                    name: "internName"
+                },
+                {
+                    type: "input",
+                    message: "Enter the intern's employee ID :",
+                    name: "internId"
+                },
+                {
+                    type: "input",
+                    message: "Enter the intern's email address : ",
+                    name: "internEmail"
+                },
+                {
+                    type: "input",
+                    message: "Enter the school of the intern : ",
+                    name: "internSchool"
+                },
+            ])
+            .then (response => {
+                const intern = new Intern(response.internName, response.internId, response.internEmail, response.internSchool);
+                teamMembersArray.push(intern);
+                makeTeam();
+            }
+        );
+    }
 
 
 
