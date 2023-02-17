@@ -44,10 +44,60 @@ function startApp(){
                     default:
                         buildHTML();
                 }
-            });
-
-        
-
-        
+            });       
     }
+
+    // Function to create Manager
+    function createManager () {
+        inquirer.prompt(
+            [
+                {
+                    type: "input",
+                    message: "What is the name of the manager?",
+                    name: "managerName"
+                },
+                {
+                    type: "input",
+                    message: "What is the manager's employee ID?",
+                    name: "managerId"
+                },
+                {
+                    type: "input",
+                    message: "What is the manager's email address?",
+                    name: "managerEmail"
+                },
+                {
+                    type: "input",
+                    message: "What is the manager's offcie number?",
+                    name: "managerOffice"
+                },
+            ])
+            .then (response => {
+                const manager = new Manager(response.managerName, response.managerId, response.managerEmail, response.managerOffice);
+                teamMembersArray.push(manager);
+                makeTeam();
+            }
+        );
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
