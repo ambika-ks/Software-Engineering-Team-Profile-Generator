@@ -146,20 +146,9 @@ function startApp(){
         );
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //Generate HTML file 
+    function buildHTML () {
+        fs.writeFileSync('./output/team.html', generateHTML(teamMembersArray));
+        console.log('The team HTML file has been generated inside the directory output');
+    }
 }
