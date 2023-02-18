@@ -16,7 +16,7 @@ const render = require("./src/page-template.js");
 
 
 //Array for team members
-teamMembersArray = [];
+teamMembers = [];
 
 //Start
 function startApp(){
@@ -69,12 +69,12 @@ function startApp(){
                 {
                     type: "input",
                     message: "Enter the manager's offcie number : ",
-                    name: "managerOffice"
+                    name: "managerOfficeNumber"
                 },
             ])
             .then (response => {
-                const manager = new Manager(response.managerName, response.managerId, response.managerEmail, response.managerOffice);
-                teamMembersArray.push(manager);
+                const manager = new Manager(response.managerName, response.managerId, response.managerEmail, response.managerOfficeNumber);
+                teamMembers.push(manager);
                 makeTeam();
             }
         );
@@ -107,7 +107,7 @@ function startApp(){
             ])
             .then (response => {
                 const engineer = new Engineer(response.engineerName, response.engineerId, response.engineerEmail, response.engineerGitHub);
-                teamMembersArray.push(engineer);
+                teamMembers.push(engineer);
                 makeTeam();
             }
         );
@@ -140,7 +140,7 @@ function startApp(){
             ])
             .then (response => {
                 const intern = new Intern(response.internName, response.internId, response.internEmail, response.internSchool);
-                teamMembersArray.push(intern);
+                teamMembers.push(intern);
                 makeTeam();
             }
         );
@@ -148,7 +148,7 @@ function startApp(){
 
     //Generate HTML file 
     function buildHTML () {
-        fs.writeFileSync('./output/team.html', render(teamMembersArray));
+        fs.writeFileSync('./output/team.html', render(teamMembers));
         console.log('The team HTML file has been generated inside the directory output');
     }
 }
