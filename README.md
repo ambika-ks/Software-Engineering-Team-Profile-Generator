@@ -65,8 +65,6 @@ As a manager a user want to generate a webpage that displays my team's basic inf
 The following image shows a mock-up of the generated HTML’s appearance and functionality:
 ![Software Engineering Team Profile Generator - demo](./assets/ExamplePic.png)
 
-![HTML webpage titled “My Team” features five boxes listing employee names, titles, and other key info.](./Assets/ExamplePic.png)
-
 The styling in the image is just an example, so feel free to add your own.
 
 ---
